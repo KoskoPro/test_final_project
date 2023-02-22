@@ -15,3 +15,6 @@ class BasePage():
         except NoSuchElementException:
             return False
         return True
+
+    def is_link_correct(self, word):
+       return word in self.browser.current_url
