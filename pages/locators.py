@@ -1,9 +1,12 @@
 from selenium.webdriver.common.by import By
 
+class BasketPageLocators():
+    BASKET_TEXT = (By.CSS_SELECTOR, '')
 
-class MainPageLocators():
+class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.CSS_SELECTOR, '[href$="/basket/"]')
 
 class LoginPageLocators():
     REGISTER_FORM = (By.CLASS_NAME, 'register_form')
