@@ -1,6 +1,7 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
 
+
 class ProductPage(BasePage):
     def should_be_add_product_to_basket(self):
         self.should_be_add_basket_form()
@@ -24,9 +25,9 @@ class ProductPage(BasePage):
         assert basket_price == product_price, "Wrong basket product price"
 
     def should_not_be_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.CHECK_BASKET),\
+        assert self.is_not_element_present(*ProductPageLocators.CHECK_BASKET), \
             "Success message is presented, but should not be"
 
     def should_be_success_message(self):
-        assert self.is_disappeared(*ProductPageLocators.CHECK_BASKET),\
+        assert self.is_disappeared(*ProductPageLocators.CHECK_BASKET), \
             "Success message is not presented, but should be"

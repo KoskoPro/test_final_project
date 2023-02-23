@@ -38,7 +38,7 @@ class BasePage():
         return True
 
     def is_link_correct(self, word):
-       return word in self.browser.current_url
+        return word in self.browser.current_url
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
@@ -63,7 +63,7 @@ class BasePage():
 
     def is_disappeared(self, how, what, timeout=4):
         try:
-            WebDriverWait(self.browser, timeout, 1, TimeoutException).\
+            WebDriverWait(self.browser, timeout, 1, TimeoutException). \
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
